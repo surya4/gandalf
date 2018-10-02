@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-game-control (intervalFired) = "onIntervalFired($event)"></app-game-control>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-odd *ngFor="let oddNumber of oddNumbers" [number] = "oddNumber"></app-odd>
+    <app-even *ngFor="let evenNumber of evenNumbers" [number] = "evenNumber"></app-even>
+  </div>
+</div>
+<p appBasicHighlight>Style me with basic directives</p>
+<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">Style me with better directives</p>

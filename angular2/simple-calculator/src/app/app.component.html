@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="header clearfix">
+    <h3 class="text-muted">Simple Angular2 Calculator</h3>
+  </div>
+  <div class="row">
+    <div class=" col-md-6 jumbotron col-md-offset-3">
+      <div class="search-box col-md-12">
+        <div class="row">
+          <input type="text" id="search" value=" {{ display }} ">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+          <span class="btn btn-default" href="#" (click)="clearScreen()">C</span>
+          <span class="btn btn-default" href="#" (click)="operator('/')">/</span>
+          <span class="btn btn-default" href="#" (click)="operator('*')">*</span>
+          <span class="btn btn-default" href="#" (click)="clearLast()">CL</span>
+        </div>
+        <div class="row">
+          <span class="btn btn-default" href="#" (click)="concat('7')">7</span>
+          <span class="btn btn-default" href="#" (click)="concat('8')">8</span>
+          <span class="btn btn-default" href="#" (click)="concat('9')">9</span>
+          <span class="btn btn-default" href="#" (click)="operator('-')">-</span>
+        </div>
+        <div class="row">
+          <span class="btn btn-default" href="#" (click)="concat('4')">4</span>
+          <span class="btn btn-default" href="#" (click)="concat('5')">5</span>
+          <span class="btn btn-default" href="#" (click)="concat('6')">6</span>
+          <span class="btn btn-default" href="#" (click)="operator('+')">+</span>
+        </div>
+        <div class="row">
+          <span class="btn btn-default" href="#" (click)="concat('1')">1</span>
+          <span class="btn btn-default" href="#" (click)="concat('2')">2</span>
+          <span class="btn btn-default" href="#" (click)="concat('3')">3</span>
+          <span class="btn btn-default" href="#" (click)="brackets('()')">()</span>
+        </div>
+        <div class="row">
+          <span class="btn btn-default" href="#" (click)="concat('0')">0</span>
+          <span class="btn btn-default" href="#" (click)="concat('.')">.</span>
+          <span class="btn btn-default" href="#" (click)="operator('+')">+</span>
+          <span class="btn btn-default" href="#" (click)="calculate('=')">=</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

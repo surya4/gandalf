@@ -1,0 +1,48 @@
+
+.search-input{
+-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Telefon Black", Sans-Serif;
+    font-size: 4rem;
+    font-weight: bold;
+    background: none;
+    color: white;
+    box-shadow: none !important;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+    width: 100%;
+    outline: 0;
+}
+
+.visually-hidden,.screen-reader-text {
+    position: absolute !important;
+    top: -9999px;
+    left: -9999px;
+}
+
+.header {
+  color: #fff;
+}
+
+.row h3, p{
+  color: black;
+}
+
+.panel-default{
+  margin-top: 10%;
+}
+
+.img-thumbnail{
+  width: 100%;
+}
+
+.view_p {
+  margin-top: 3%;
+  width: 100%;
+}
+
+.col-md-9 a {
+  color: black;
+}

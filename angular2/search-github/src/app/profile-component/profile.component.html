@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="header clearfix">
+    <h3>GitSea</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row text-center">
+        <div class="search-box col-md-12">
+          <label class="screen-reader-text" for="q">Search users</label>
+          <input form autocomplete="off" type="search" name="q" id="query" required="true" value="" placeholder="Search Github Users" class="search-input"
+          [(ngModel)]="username" name="username" (keyup)="searchUser()">
+          <input type="hidden" name="limit" value="all">
+          <input type="submit" class="button search-button visually-hidden" value="Search">
+        </div>
+      </div>
+      <div *ngIf="userData">
+        <div class="panel panel-default">
+          <div class="panel panel-heading">
+            <h3 class="panel-title">{{ userData.name }}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-4">
+                <img class="img-thumbnail" src="{{ userData.avatar_url }}" alt="">
+                <a class="btn btn-default btn-block view_p" target="_blank" href="{{ userData.html_url }}">View Profile</a>
+              </div>
+              <div class="col-md-8">
+                <div class="stats">
+                  <span class="label label-default">{{ userData.public_repos }} Public Repos</span>
+                  <span class="label label-primary">{{ userData.public_gists }} Public Gists</span>
+                  <span class="label label-success">{{ userData.followers }} Followers</span>
+                  <span class="label label-info">{{ userData.following }} Following</span>
+                </div>
+                <br>
+                <ul class="list-group">
+                  <li class="list-group-item"><strong>Username: </strong>{{ userData.login }}</li>
+                  <li class="list-group-item"><strong>Location: </strong>{{ userData.location }}</li>
+                  <li class="list-group-item"><strong>Email: </strong>{{ userData.email }}</li>
+                  <li class="list-group-item"><strong>Blog: </strong>{{ userData.blog }}</li>
+                  <li class="list-group-item"><strong>Member Since: </strong>{{ userData.created_at }}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading"><strong>Public Repositories</strong></div>
+              <div class="panel-body">
+                <div *ngFor="let repo of repoData">
+                  <div class="row">
+                    <div class="col-md-9">
+                      <p><strong><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></strong></p>
+                    </div>
+                    <div class="col-md-3">
+                    <span class="label label-default">{{ repo.watchers }} Watch</span>
+                    <span class="label label-primary">{{ repo.stargazers_count }} Star</span>
+                    <span class="label label-success">{{ repo.forks }} Fork</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="xyz.suryasingh.quizapp.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Q1. What is the remainder when 20001000 divided by 13?"
+        style="@style/CustomText"/>
+    <RadioGroup
+        android:id="@+id/q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/q1_a"
+            android:text="3"
+            android:onClick="questionOne"
+            style="@style/CustomRadio"/>
+        <RadioButton
+            android:id="@+id/q1_b"
+            android:text="4"
+            android:onClick="questionOne"
+            style="@style/CustomRadio"/>
+        <RadioButton
+            android:id="@+id/q1_c"
+            android:text="8"
+            android:onClick="questionOne"
+            style="@style/CustomRadio"/>
+        <RadioButton
+            android:id="@+id/q1_d"
+            android:text="11"
+            android:onClick="questionOne"
+            style="@style/CustomRadio"/>
+    </RadioGroup>
+
+    <TextView
+        android:text="Q2. There are only two robots, TARS and CASE aboard the NASA spacecraft. It takes TARS 'x' hours to do a job that CARS can do in 'y' hours.  If TARS operates alone for 'z' hours and is then joined by CASE until 100 such identical jobs are done, for how long will the two operate simultaneously?"
+        style="@style/CustomText"/>
+    <RadioGroup
+        android:id="@+id/q2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/q2_a"
+            android:text="(100xy-z) / (x+y)"
+            android:onClick="questionTwo"
+            style="@style/CustomRadio"/>
+        <RadioButton
+            android:id="@+id/q2_b"
+            android:text="y(100x-z) / (x+y)"
+            android:onClick="questionTwo"
+            style="@style/CustomRadio"/>
+        <RadioButton
+            android:id="@+id/q2_c"
+            android:text="100y(x-z) / (x+y)"
+            android:onClick="questionTwo"
+            style="@style/CustomRadio"/>
+        <RadioButton
+            android:id="@+id/q2_d"
+            android:text="None of the above"
+            android:onClick="questionTwo"
+            style="@style/CustomRadio"/>
+    </RadioGroup>
+
+    <TextView
+        android:text="Q3. Ram can complete the work in 10 hours, Ajit in 12 hours and Suresh in 15 hours. All of them began the work together, but Ram had to leave the work after 2 hours of the start and Ajit left 3 hours before the completion of the work. How long did the work last?"
+        style="@style/CustomText"/>
+
+    <CheckBox android:id="@+id/q3_a"
+        android:onClick="questionThree"
+        android:text="7 hrs"
+        style="@style/CustomCheckBox"/>
+    <CheckBox android:id="@+id/q3_b"
+        android:onClick="questionThree"
+        android:text="8 hrs"
+        style="@style/CustomCheckBox"/>
+    <CheckBox android:id="@+id/q3_c"
+        android:onClick="questionThree"
+        android:text="9 hrs"
+        style="@style/CustomCheckBox"/>
+    <CheckBox android:id="@+id/q3_d"
+        android:onClick="questionThree"
+        android:text="Cannot be determined"
+        style="@style/CustomCheckBox"/>
+
+    <TextView
+        android:text="Q4. A ship develops a leak 12 km from the shore. Despite the leak, the ship is able to move towards the shore at a speed of 8 km/hr. However, the ship can stay afloat only for 20 minutes. If a rescue vessel were to leave from the shore towards the ship, and it takes 4 minutes to evacuate the crew and passengers of the ship, what should be the minimum speed of the rescue vessel in order to be able to successfully rescue the people aboard the ship?"
+        style="@style/CustomText"/>
+
+    <CheckBox android:id="@+id/q4_a"
+        android:onClick="questionFour"
+        android:text="28 kmph"
+        style="@style/CustomCheckBox"/>
+    <CheckBox android:id="@+id/q4_b"
+        android:text="37 kmph"
+        android:onClick="questionFour"
+        style="@style/CustomCheckBox"/>
+    <CheckBox android:id="@+id/q4_c"
+        android:text="44 kmph"
+        android:onClick="questionFour"
+        style="@style/CustomCheckBox"/>
+    <CheckBox android:id="@+id/q4_d"
+        android:text="53 kmph"
+        android:onClick="questionFour"
+        style="@style/CustomCheckBox"/>
+
+    <TextView
+        android:text="Q5. What is Cross Site Scripting? How to avoid Cross Site Scripting? What is the short name for Cross Site Scripting?"
+        style="@style/CustomText"/>
+
+    <EditText
+        android:id="@+id/q5"
+        android:hint="abra"
+        android:onClick="questionFive"
+        style="@style/CustomTextBox" />
+
+    <TextView
+        android:text="Q6. What is the difference between HTML and XHTML?What special care should you take care while validating for these two markup language."
+        style="@style/CustomText"/>
+
+    <EditText
+        android:id="@+id/q6"
+        android:hint="dabra"
+        android:onClick="questionSix"
+        style="@style/CustomTextBox" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16sp"
+        android:text="Submit"
+        android:layout_alignParentBottom="true"
+        android:onClick="submitTest"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>

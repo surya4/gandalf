@@ -1,0 +1,20 @@
+// Start git
+git init
+
+// add file to commit
+git add 'abra.js'
+
+// add all files to commit
+git add .
+
+// commit with message
+git commit -m 'abra.js'
+
+// check added files in repo
+git status
+
+// Remove git from repo
+rm -rf .git
+
+// removing file from remote but not local which is added in commit
+git rm --cached 'abra.js'

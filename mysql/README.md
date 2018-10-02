@@ -1,0 +1,1 @@
+* sol1 - create table

@@ -1,0 +1,2 @@
+Remove edge: g.V('user1412462').bothE().where(otherV().hasId('user1412462')).drop()
+g.V().has('id', 'user1412462').outE()

@@ -1,0 +1,4 @@
+1. cd apache-tinkerpop-gremlin-console-3.3.2/
+2. bin/gremlin.sh
+3. :remote connect tinkerpop.server conf/remote.yaml
+4. :remote console

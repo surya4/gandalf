@@ -31,7 +31,9 @@ func userDetails(user User) {
 func main() {
 	var s = User{1234, "Abra"}
 	userDetails(s)
-	aboutUser5("Abra ka dabra", customPrint) 
+	aboutUser5("Abra ka dabra", customPrint)
+	aboutUser6("Abra ka dabra", customPrint)
+	aboutUser7("Abra ka dabra", customPrintFunc("closure sending message")) 
 }
 
 // return function 
@@ -60,7 +62,7 @@ func aboutUser4(id int, name ...string) (string) {
 
 // custom function pasing in another function
 func aboutUser5(name string, customFunc func(string)) {
-	customFunc("helllo " + name)
+	customFunc("helllo " + name + " aboutUser5")
 }
 
 func customPrint(inp string) {
@@ -68,7 +70,18 @@ func customPrint(inp string) {
 }
 
 // function type
-type CustomePrinter func (string) {}
-func aboutUser5(name string, type CustomePrinter) {
-	customFunc("helllo " + name)
+type CustomePrinter func (string) ()
+func aboutUser6(name string, customFunc CustomePrinter) {
+	customFunc("helllo " + name + " aboutUser6")
+}
+
+// closure
+func aboutUser7(name string, customFunc CustomePrinter) {
+	customFunc("helllo " + name + " aboutUser7")
+}
+
+func customPrintFunc(inp string) CustomePrinter {
+	return func (name string)  {
+		fmt.Println("Custome print function called from closure. inp ->", name + inp)
+	}
 }

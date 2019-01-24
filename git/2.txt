@@ -1,0 +1,2 @@
+// Delete all branch except master and dev - 
+git branch | grep -v "master\|dev" | xargs git branch -D

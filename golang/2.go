@@ -16,7 +16,7 @@ func main() {
 	var int_50 int64 = math.MinInt64
 	var int_51 int64 = math.MaxInt64
 
-	fmt.Println("int scope ->", int_10, int_11)
+	fmt.Println("int value ->", int_10, int_11)
 	fmt.Println("int8 scope ->", int_20, int_21)
 	fmt.Println("int16 scope ->", int_30, int_31)
 	fmt.Println("int32 scope ->", int_40, int_41)
@@ -30,7 +30,7 @@ func main() {
 	var uint_5 uint64 = math.MaxUint64
 	// var uint_6 uintptr = 
 
-	fmt.Println("uint scope ->", uint_1)
+	fmt.Println("uint value ->", uint_1)
 	fmt.Println("uint8 scope ->", uint_2)
 	fmt.Println("uint16 scope ->", uint_3)
 	fmt.Println("uint32 scope ->", uint_4)

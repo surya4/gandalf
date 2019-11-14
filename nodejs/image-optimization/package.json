@@ -28,7 +28,7 @@
         "jimp": "^0.3.5",
         "mapnik": "^4.0.1",
         "method-override": "^2.3.10",
-        "mongoose": "^4.10.8",
+        "mongoose": "^5.7.5",
         "morgan": "~1.9.1",
         "node-image-resizer": "^1.0.0",
         "node-imagemagick": "^0.1.8",

@@ -13,7 +13,7 @@
     "ejs": "~2.5.6",
     "express": "~4.15.2",
     "html-metadata": "^1.6.3",
-    "morgan": "~1.8.1",
+    "morgan": "~1.9.1",
     "node-microdata-scraper": "0.0.4",
     "preq": "^0.5.2",
     "serve-favicon": "~2.4.2"

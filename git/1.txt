@@ -17,4 +17,5 @@ git status
 rm -rf .git
 
 // removing file from remote but not local which is added in commit
+// it also helps when remote folder becomes non readable or static
 git rm --cached 'abra.js'

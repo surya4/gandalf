@@ -1,0 +1,79 @@
+<html lang="en">
+<% include ../../partials/header %>
+
+    <body>
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header col-xs-12">
+                    <a class="navbar-brand logo" href="/">
+                        <span><%= (typeof title != "undefined" ? title : "") %></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- login form -->
+        <div class="container">
+            <div class="row">
+                <div class="panel">
+                    <div class="panel-body">
+                        <% if (messages.error) {%>
+                            <div class="alert alert-danger">
+                                <% messages.error.forEach(function(msg){ %>
+                                    <p>
+                                        <%= msg %>
+                                    </p>
+                                    <% });%>
+                            </div>
+                            <% }%>
+                                <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form">
+                                    <!-- <h3>Sign In</h3>
+                        <div class="form-bottom"> -->
+                                    <form role="form" action="/login" method="post" class="login-form">
+                                        <legend>Login to the account</legend>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="text" name="email" placeholder="Enter email" class="form-email form-control" id="form-email" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="text" name="password" placeholder="Enter password" class="form-password form-control" id="form-password">
+                                        </div>
+                                        <div class="form-group"><a href="/forgot">Forgot your password?</a></div>
+                                        <button type="submit" class="btn">Sign in</button>
+                                    </form>
+                                    <!-- </div> -->
+                                    <!-- </div>
+            </div> -->
+                                    <!-- <div class="row"> -->
+                                    <hr>
+                                    <!-- <div class="hr-title text-center"><span>or</span></div> -->
+                                    <div class="btn-toolbar text-center">
+                                        <a href="/auth/facebook" class="btn btn btn-link-1 btn-link-facebook">
+                                            <span class="">Facebook</span>
+                                        </a>
+                                        <a href="/auth/twitter" class="btn btn-link-1 btn-link-twitter">
+                                            <span class="">Twitter</span>
+                                        </a>
+                                        <a href="/auth/google" class="btn btn btn-link-1 btn-link-google-plus">
+                                            </i><span class="">Google+</span></a>
+                                        </a>
+                                        <a href="/auth/github" class="btn btn btn-link-1 btn-link-github">
+                                            </i><span class="">Github</span></a>
+                                        </a>
+                                    </div>
+                                    <div class="text-center">
+                                        <p>
+                                            Don't have an account? <a href="/signup"><strong>Sign up</strong></a>
+                                        </p>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% include ../../partials/footer %>
+            <% include ../../partials/scripts %>
+    </body>
+
+</html>

@@ -1,0 +1,39 @@
+{
+    "name": "image-optimization",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "DEBUG=image-optimization node ./bin/www",
+        "local": "nodemon bin/www"
+    },
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "~1.17.1",
+        "cookie-parser": "~1.4.3",
+        "cpus": "^1.0.2",
+        "crypto": "^1.0.1",
+        "debug": "~2.6.3",
+        "dotenv": "^4.0.0",
+        "easyimage": "^3.1.0",
+        "ejs": "^2.5.7",
+        "express": "^4.15.5",
+        "express-flash": "0.0.2",
+        "express-session": "^1.15.6",
+        "express-validator": "^4.2.1",
+        "gm": "^1.23.1",
+        "image-processor": "^0.1.1",
+        "imagemin": "^6.0.0",
+        "imagemin-guetzli": "^1.0.0",
+        "images": "^3.0.1",
+        "jimp": "^0.3.5",
+        "mapnik": "^4.0.1",
+        "method-override": "^2.3.10",
+        "mongoose": "^4.10.8",
+        "morgan": "~1.8.1",
+        "node-image-resizer": "^1.0.0",
+        "node-imagemagick": "^0.1.8",
+        "pajk-lwip": "^0.2.0",
+        "serve-favicon": "~2.4.2",
+        "sharp": "^0.20.5"
+    }
+}

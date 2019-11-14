@@ -1,0 +1,80 @@
+<html lang="en">
+<% include ../../partials/header %>
+
+    <body>
+        <% include ../../partials/nav %>
+            <!-- signup form -->
+            <div class="container">
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <% if (messages.error) {%>
+                                <div class="alert alert-danger">
+                                    <% messages.error.forEach(function(msg){ %>
+                                        <p>
+                                            <%= msg %>
+                                        </p>
+                                        <% });%>
+                                </div>
+                                <% }%>
+
+                                    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form">
+                                        <!-- <h3>Sign Up</h3>
+                                <div class="form-bottom"> -->
+                                        <form role="form" action="/signup" method="post" class="signup-form">
+                                            <legend>Create an account</legend>
+                                            <div class="form-group">
+                                                <label for="name">Name</label>
+                                                <input type="text" name="name" id="name" placeholder="Name" class="form-control" autofocus>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" name="username" id="username" placeholder="Select a unique username" class="form-control" autofocus>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="con-password">Confirm Password</label>
+                                                <input type="password" name="con-password" id="con-password" placeholder="Conform Password" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <small class="text-muted">By signing up, you agree to the <a href="/">Terms of Service</a>.</small>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Create an account</button>
+                                        </form>
+                                        <!-- </div> -->
+                                        <!-- </div>
+                    </div> -->
+                                        <!-- <div class="row"> -->
+                                        <hr>
+                                        <!-- <div class="hr-title text-center"><span>or</span></div> -->
+                                        <div class="btn-toolbar text-center">
+                                            <a href="/auth/facebook" class="btn btn btn-link-1 btn-link-facebook">
+                                                <span class="">Facebook</span>
+                                            </a>
+                                            <a href="/auth/twitter" class="btn btn-link-1 btn-link-twitter">
+                                                <span class="">Twitter</span>
+                                            </a>
+                                            <a href="/auth/google" class="btn btn btn-link-1 btn-link-google-plus">
+                                                </i><span class="">Google+</span></a>
+                                            </a>
+                                            <a href="/auth/github" class="btn btn btn-link-1 btn-link-github">
+                                                </i><span class="">Github</span></a>
+                                            </a>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% include ../../partials/footer %>
+                <% include ../../partials/scripts %>
+    </body>
+
+</html>

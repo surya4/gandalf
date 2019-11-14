@@ -1,0 +1,21 @@
+{
+  "name": "node-html-metadata",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "html-metadata": "^1.6.3",
+    "morgan": "~1.8.1",
+    "node-microdata-scraper": "0.0.4",
+    "preq": "^0.5.2",
+    "serve-favicon": "~2.4.2"
+  }
+}
